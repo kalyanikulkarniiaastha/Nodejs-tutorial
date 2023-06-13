@@ -11,11 +11,10 @@ var romanToInt = function(s) {
     
     let result = 0;
     for (let i = 0; i < s.length; i++) {
-        //if the next roman numeral is larger, then we know we have to subtract this number
         if (table[s[i]] < table[s[i+1]]) {
             result-=table[s[i]]
         } 
-        //otherwise, add like normal. 
+        
         else {
             result+=table[s[i]]
         }
